@@ -32,7 +32,6 @@ function Game(props: GameProps): React.ReactElement {
     if (props.end) return;
     props.move(index);
   }
-  console.log(props);
 
   return (
     <Container style={{ display: props.hide ? "none" : "flex" }}>

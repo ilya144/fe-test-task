@@ -72,11 +72,16 @@ export default function GameBoard({
     <Paper className={classes.paper} elevation={3}>
       {board &&
         board.map((_, column: number) => (
-          <ButtonGroup className={classes.gameBtnGroup} orientation="vertical">
+          <ButtonGroup
+            key={column}
+            className={classes.gameBtnGroup}
+            orientation="vertical"
+          >
             {Array(3)
               .fill(0)
               .map((_, row: number) => (
                 <Button
+                  key={row}
                   className={classes.gameBtn}
                   onClick={() => move(row + 1 + column * 3)}
                 >

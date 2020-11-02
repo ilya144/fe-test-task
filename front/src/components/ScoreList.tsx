@@ -40,8 +40,13 @@ export default function ScoreList(props: ScoreListProps) {
         style={{ maxHeight: "500px", overflowY: "auto" }}
       >
         {props.list &&
-          props.list.map(row => (
-            <Grid container justify="space-around" style={{ margin: "10px 0" }}>
+          props.list.map((row, index) => (
+            <Grid
+              key={index}
+              container
+              justify="space-around"
+              style={{ margin: "10px 0" }}
+            >
               <Typography color="textPrimary" style={{ width: "33%" }}>
                 {new Date(row.ts).toDateString()}
               </Typography>

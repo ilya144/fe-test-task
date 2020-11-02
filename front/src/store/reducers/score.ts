@@ -12,7 +12,7 @@ const initialState: IScore = {
   error: null,
 };
 
-const GameReducer = createReducer<IScore>(initialState, [
+const ScoreReducer = createReducer<IScore>(initialState, [
   ScoreActions.getScore,
   ScoreActions.resetScore,
 ]);
