@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./front/build",
+    "target": "es5",
+    "module": "es6",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "lib": ["es6", "dom"],
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "baseUrl": "."
+  }
+}
