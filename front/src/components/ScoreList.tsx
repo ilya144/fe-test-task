@@ -17,6 +17,17 @@ export default function ScoreList(props: ScoreListProps) {
     }
   }
 
+  function prettifyDate(ts: number) {
+    return new Date(ts).toLocaleString("ru", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+  }
+
   return (
     <>
       <Grid container direction="column" alignItems="center">
@@ -48,7 +59,7 @@ export default function ScoreList(props: ScoreListProps) {
               style={{ margin: "10px 0" }}
             >
               <Typography color="textPrimary" style={{ width: "33%" }}>
-                {new Date(row.ts).toDateString()}
+                {prettifyDate(row.ts)}
               </Typography>
               <Typography color="textPrimary" style={{ width: "33%" }}>
                 {getStatus(row.winner)}
